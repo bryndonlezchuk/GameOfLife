@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "P4_GameOfLife", "P4_GameOfLife\P4_GameOfLife.vcxproj", "{D45F6E2E-64EC-4662-8E49-562D28FA100F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ScreenPrinter", "ScreenPrinter\ScreenPrinter.vcxproj", "{1CC640EC-40D4-44EA-869A-63ACA1784DD2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{D45F6E2E-64EC-4662-8E49-562D28FA100F}.Release|x64.Build.0 = Release|x64
 		{D45F6E2E-64EC-4662-8E49-562D28FA100F}.Release|x86.ActiveCfg = Release|Win32
 		{D45F6E2E-64EC-4662-8E49-562D28FA100F}.Release|x86.Build.0 = Release|Win32
+		{1CC640EC-40D4-44EA-869A-63ACA1784DD2}.Debug|x64.ActiveCfg = Debug|x64
+		{1CC640EC-40D4-44EA-869A-63ACA1784DD2}.Debug|x64.Build.0 = Debug|x64
+		{1CC640EC-40D4-44EA-869A-63ACA1784DD2}.Debug|x86.ActiveCfg = Debug|Win32
+		{1CC640EC-40D4-44EA-869A-63ACA1784DD2}.Debug|x86.Build.0 = Debug|Win32
+		{1CC640EC-40D4-44EA-869A-63ACA1784DD2}.Release|x64.ActiveCfg = Release|x64
+		{1CC640EC-40D4-44EA-869A-63ACA1784DD2}.Release|x64.Build.0 = Release|x64
+		{1CC640EC-40D4-44EA-869A-63ACA1784DD2}.Release|x86.ActiveCfg = Release|Win32
+		{1CC640EC-40D4-44EA-869A-63ACA1784DD2}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
