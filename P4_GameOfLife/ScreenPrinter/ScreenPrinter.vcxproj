@@ -143,6 +143,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\P4_GameOfLife\ScreenPrinter.c" />
+    <ClCompile Include="Driver.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\P4_GameOfLife\ScreenPrinter.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

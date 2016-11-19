@@ -18,5 +18,13 @@
     <ClCompile Include="..\P4_GameOfLife\ScreenPrinter.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Driver.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\P4_GameOfLife\ScreenPrinter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
