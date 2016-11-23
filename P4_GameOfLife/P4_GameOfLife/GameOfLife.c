@@ -15,6 +15,15 @@
 #define GRIDHEIGHT 20
 #define GENERATIONS 2
 
+struct Life {
+char name[70];
+int	 gen;		// generation or Z 
+int	 row;		// Y 
+int	 col;		// X 
+int  version;
+int  active;
+};
+
 //------------------------------------------------------------------------------
 //   Function:    main()
 //
@@ -47,11 +56,16 @@
 
 int main(int argc, char *argv[])
 {
-	char lifeGrid[GENERATIONS][GRIDWIDTH][GRIDHEIGHT];
+	struct Life life;
+	char lifeGrid[GENERATIONS][GRIDHEIGHT][GRIDWIDTH];
 	int generationCounter = 0;
 	int currentGeneration = 0;
+
+	//variables for files
 	FILE * inFileHandle = NULL;
 	char filenameInput[FILENAME_MAX] = "";
+
+	//variables for main
 	char prompt = 'n';
 	int quit = 0;
 	int returnValue = EXIT_SUCCESS;
@@ -88,7 +102,7 @@ int main(int argc, char *argv[])
 			}
 			else
 			{
-				//read(inFileHandle, lifeGrid)
+				//read_data(inFileHandle, &lifeGrid[currentGeneration], currentGeneration, &life);
 				prompt = ' ';
 			}
 			break;
