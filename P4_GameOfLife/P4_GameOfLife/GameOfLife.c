@@ -10,6 +10,7 @@
 #include <conio.h>
 #include <math.h>
 #include "ScreenPrinter.c"
+#pragma warning(disable: 4996)
 
 #define GRIDWIDTH 40
 #define GRIDHEIGHT 20
