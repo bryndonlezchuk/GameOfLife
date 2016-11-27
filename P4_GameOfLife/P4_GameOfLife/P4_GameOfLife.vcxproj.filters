@@ -21,6 +21,9 @@
     <ClCompile Include="ScreenPrinter.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="walkthrough.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ScreenPrinter.h">
