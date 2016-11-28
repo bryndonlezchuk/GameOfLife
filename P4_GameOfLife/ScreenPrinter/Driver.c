@@ -8,15 +8,20 @@
 
 int main(void)
 {
-	char a1[xSIZE][ySIZE] = {
-		{' ', '*', ' '}
-		{' ', '*', ' '}
+	int rows = ySIZE;
+	int cols = xSIZE;
+
+	char a1[ySIZE][xSIZE] = {
+		{' ', '*', ' '},
+		{' ', '*', ' '},
+		//{' ', '*', ' '},
 		{' ', '*', ' '}
 	};
 	printf("Screen printer test, press any key to continue");
 	getche();
 
-	printToScreen(ySIZE, xSIZE, a1);
+	printToScreen(a1, cols, rows * cols);
+	//printToScreen(ySIZE, xSIZE, a1);
 
 	getche();
 	return EXIT_SUCCESS;

@@ -5,6 +5,7 @@
 //----------------------------------------------------------------------
 
 #include <stdio.h>
+#include <stdlib.h>
 #include "ScreenPrinter.h"
 #pragma warning(disable: 4996)
 
@@ -19,7 +20,7 @@
 // Programmer: Bryndon Lezchuk
 //
 // Date:	11/27/2016
-// Version:	1.0
+// Version:	2.0
 //
 // Environment:
 //		Hardware: Intel Core i7
@@ -35,7 +36,7 @@
 // Calls: n/a
 //
 // Parameters:
-//		height: int; total number of rows in array
+//		totalNumberElements: size_t; total number of elements in array
 //		width: int; total number of columns in array
 //		plane: char *; array of characters to print
 //
@@ -43,20 +44,45 @@
 //
 // History Log:
 //		11/27/2016	bcl	started version 1.0
+//		11/27/2016	bcl	transfered to version 2.0
+//		11/27/2016	bcl	completed version 2.0
 //-------------------------------------------------------------------
-void printToScreen(int height, int width, char plane[height][width])
+void printToScreen(char *plane, int width, size_t totalNumberElements)
 {
-	int x = 0;
-	int y = 0;
+	int x, y;
+	//this will return the size of the pointer
+	//int sizeOfPlane = sizeof(plane);
+
+	int height = totalNumberElements / width;
+
+	system("cls");
 
 	for (y = 0; y < height; y++)
 	{
 		for (x = 0; x <= width; x++)
 		{
-			if (x = width)
-				putchar("\n");
+			if (x == width)
+				putchar('\n');
 			else
-				putchar(plane[y][x]);
+				printf("%c", *(plane + y*width + x));
+				//not pretty but it works
 		}
 	}
 }
+// v1.0
+//void printToScreen(int height, int width, char plane[height][width])
+//{
+//	int x = 0;
+//	int y = 0;
+//
+//	for (y = 0; y < height; y++)
+//	{
+//		for (x = 0; x <= width; x++)
+//		{
+//			if (x = width)
+//				putchar("\n");
+//			else
+//				putchar(plane[y][x]);
+//		}
+//	}
+//}
