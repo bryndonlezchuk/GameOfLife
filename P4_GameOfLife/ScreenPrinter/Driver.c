@@ -3,7 +3,7 @@
 #include <conio.h>
 #include "../P4_GameOfLife/ScreenPrinter.h"
 #pragma warning(disable: 4996)
-#define xSIZE 3
+#define xSIZE 5
 #define ySIZE 3
 
 int main(void)
@@ -12,10 +12,10 @@ int main(void)
 	int cols = xSIZE;
 
 	char a1[ySIZE][xSIZE] = {
-		{' ', '*', ' '},
-		{' ', '*', ' '},
+		{'|', ' ', '*', ' ', '|'},
+		{ '|', ' ', '*', ' ', '|' },
 		//{' ', '*', ' '},
-		{' ', '*', ' '}
+		{ '|', ' ', '*', ' ', '|' }
 	};
 	printf("Screen printer test, press any key to continue");
 	getche();

@@ -48,7 +48,7 @@
 //		11/27/2016	bcl	completed version 2.0
 //		11/29/2016	bcl	v2.1 - adjusted parameters for simplicity
 //-------------------------------------------------------------------
-void printToScreen(char *plane, int height, int width)
+void printToScreen(char const *plane, int height, int width)
 {
 	int x, y;
 	//this will return the size of the pointer
