@@ -20,7 +20,7 @@
 // Programmer: Bryndon Lezchuk
 //
 // Date:	11/27/2016
-// Version:	2.0
+// Version:	2.1
 //
 // Environment:
 //		Hardware: Intel Core i7
@@ -46,14 +46,13 @@
 //		11/27/2016	bcl	started version 1.0
 //		11/27/2016	bcl	transfered to version 2.0
 //		11/27/2016	bcl	completed version 2.0
+//		11/29/2016	bcl	v2.1 - adjusted parameters for simplicity
 //-------------------------------------------------------------------
-void printToScreen(char *plane, int width, size_t totalNumberElements)
+void printToScreen(char *plane, int height, int width)
 {
 	int x, y;
 	//this will return the size of the pointer
 	//int sizeOfPlane = sizeof(plane);
-
-	int height = totalNumberElements / width;
 
 	system("cls");
 

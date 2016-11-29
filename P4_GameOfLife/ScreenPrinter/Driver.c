@@ -20,7 +20,7 @@ int main(void)
 	printf("Screen printer test, press any key to continue");
 	getche();
 
-	printToScreen(a1, cols, rows * cols);
+	printToScreen(a1, rows, cols);
 	//printToScreen(ySIZE, xSIZE, a1);
 
 	getche();
