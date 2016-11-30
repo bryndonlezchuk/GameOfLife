@@ -143,12 +143,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="GameOfLife.c" />
+    <ClCompile Include="getNeighbors.c" />
+    <ClCompile Include="getNeighborsDriver.c" />
     <ClCompile Include="Project4_Anthony.c" />
     <ClCompile Include="read.c" />
     <ClCompile Include="ScreenPrinter.c" />
     <ClCompile Include="walkthrough.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="getNeighbors.h" />
     <ClInclude Include="life.h" />
     <ClInclude Include="Project4_Anthony.h" />
     <ClInclude Include="ScreenPrinter.h" />
