@@ -35,9 +35,9 @@
 // Calls: n/a
 //
 // Parameters:
-//		totalNumberElements: size_t; total number of elements in array
+//		height: int; total number of rows in array
 //		width: int; total number of columns in array
-//		plane: char *; array of characters to print
+//		plane: const char *; array of characters to print
 //
 // Returns: n/a
 //

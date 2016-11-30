@@ -24,9 +24,15 @@
     <ClCompile Include="walkthrough.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Project4_Anthony.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ScreenPrinter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Project4_Anthony.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

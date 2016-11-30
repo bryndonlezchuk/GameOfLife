@@ -143,10 +143,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="GameOfLife.c" />
+    <ClCompile Include="Project4_Anthony.c" />
     <ClCompile Include="ScreenPrinter.c" />
     <ClCompile Include="walkthrough.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Project4_Anthony.h" />
     <ClInclude Include="ScreenPrinter.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
