@@ -21,6 +21,9 @@
     <ClCompile Include="Driver.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="S:\Desktop\GitHub\P4_GameOfLife\ScreenPrinter\tmp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\P4_GameOfLife\ScreenPrinter.h">

@@ -27,12 +27,18 @@
     <ClCompile Include="NeighborCount.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="read.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ScreenPrinter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="NeighborCount.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="life.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
