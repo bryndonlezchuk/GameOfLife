@@ -37,7 +37,8 @@
 //   Input:		  ...
 //   Output:      ...
 //
-//   Calls:		...
+//   Calls:		printToScreen()
+//				read_data()
 // 
 //   Returns:	EXIT_SUCCESS (successful execution)
 //				EXIT_FAILURE (unsuccessful execution)
