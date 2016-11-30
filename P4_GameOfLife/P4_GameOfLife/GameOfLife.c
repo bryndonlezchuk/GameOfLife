@@ -9,6 +9,7 @@
 #include <string.h>
 #include <conio.h>
 #include <math.h>
+#include "life.h"
 #include "ScreenPrinter.h"
 #include "Project4_Anthony.h"
 #pragma warning(disable: 4996)
@@ -54,6 +55,7 @@ int main(int argc, char *argv[])
 	char lifeGrid[GENERATIONS][GRIDHEIGHT][GRIDWIDTH];
 	int generationCounter = 0;
 	int currentGeneration = 0;
+	Life lifeName;
 
 	//variables for files
 	FILE * inFileHandle = NULL;
@@ -97,7 +99,7 @@ int main(int argc, char *argv[])
 			else
 			{
 				currentGeneration = 0;
-				//read_data(inFileHandle, &lifeGrid[currentGeneration], currentGeneration);
+				read_data(inFileHandle, &lifeGrid[currentGeneration], currentGeneration, &lifeName);
 				prompt = ' ';
 			}
 			break;

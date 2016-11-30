@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include "life.h"
 #define GEN_MIN	2
 #define GEN		10
 #define GEN_MAX 100
@@ -9,21 +11,6 @@
 #define COL_MAX	600
 
 #define LIVE_SET "@$%&*#O0XLl"
-
-// this struct should go into a header file 
-struct Life {
-	char name[80];
-	int	 gen;		// generation or Z axis
-	int	 row;		// Y 
-	int	 col;		// X 
-	char dead;		// character to use to show dead cell
-	char live;		// character to use to show live cell
-	int  version;
-	int  delay;		// for game speed - 0 is the fastest
-	int	 gens[GEN];
-	int	 cells[GEN];
-};
-
 
 //-----------------------------------------------------------------------------
 //	Function:		chrInStr()
