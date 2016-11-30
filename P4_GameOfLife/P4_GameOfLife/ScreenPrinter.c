@@ -5,7 +5,6 @@
 //----------------------------------------------------------------------
 
 #include <stdio.h>
-#include <stdlib.h>
 #include "ScreenPrinter.h"
 #pragma warning(disable: 4996)
 
@@ -47,6 +46,7 @@
 //		11/27/2016	bcl	transfered to version 2.0
 //		11/27/2016	bcl	completed version 2.0
 //		11/29/2016	bcl	v2.1 - adjusted parameters for simplicity
+//		11/29/2016	bcl	removed system("cls")
 //-------------------------------------------------------------------
 void printToScreen(char const *plane, int height, int width)
 {
@@ -54,7 +54,7 @@ void printToScreen(char const *plane, int height, int width)
 	//this will return the size of the pointer
 	//int sizeOfPlane = sizeof(plane);
 
-	system("cls");
+	//system("cls");
 
 	for (y = 0; y < height; y++)
 	{
