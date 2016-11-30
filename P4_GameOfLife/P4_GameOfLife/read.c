@@ -1,5 +1,7 @@
 #include <stdio.h>
+#include <string.h>
 #include "life.h"
+#pragma warning(disable: 4996)
 #define GEN_MIN	2
 #define GEN		10
 #define GEN_MAX 100
@@ -173,14 +175,17 @@ void read_data(FILE *fp, char arr[][ROW][COL], char idx, Life *life)
 	{
 		fg_result = fgets(line, FILENAME_MAX, fp);
 
-		for (j = 0; j < life->col; j++) 
-			if ((fg_result != NULL) && (j <= (int) strlen(line)))
-				if (chrinstr(line[j], LIVE_SET)) 
-					setLive(arr, idx, life, i, j); 
+		for (j = 0; j < life->col; j++)
+			if ((fg_result != NULL) && (j <= (int)strlen(line)))
+				if (chrinstr(line[j], LIVE_SET))
+					arr[idx][i][j] = '*'; 
+					//setLive(arr, idx, life, i, j); 
 				else
-					setDead(arr, idx, life, i, j);				
+					arr[idx][i][j] = '.';
+					// setDead(arr, idx, life, i, j);				
 			else
-				setDead(arr, idx, life, i, j);							
+				arr[idx][i][j] = '.';
+				//setDead(arr, idx, life, i, j);							
 
 		line[0] = '\0'; 
 	}
