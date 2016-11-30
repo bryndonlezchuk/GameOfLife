@@ -9,21 +9,12 @@
 #include <string.h>
 #include <conio.h>
 #include <math.h>
-#include "ScreenPrinter.c"
+#include "ScreenPrinter.h"
 #pragma warning(disable: 4996)
 
 #define GRIDWIDTH 40
 #define GRIDHEIGHT 20
 #define GENERATIONS 2
-
-struct Life {
-char name[70];
-int	 gen;		// generation or Z 
-int	 row;		// Y 
-int	 col;		// X 
-int  version;
-int  active;
-};
 
 //------------------------------------------------------------------------------
 //   Function:    main()
@@ -46,7 +37,8 @@ int  active;
 //   Input:		  ...
 //   Output:      ...
 //
-//   Calls:		...
+//   Calls:		printToScreen()
+//				read_data()
 // 
 //   Returns:	EXIT_SUCCESS (successful execution)
 //				EXIT_FAILURE (unsuccessful execution)
@@ -57,7 +49,6 @@ int  active;
 
 int main(int argc, char *argv[])
 {
-	struct Life life;
 	char lifeGrid[GENERATIONS][GRIDHEIGHT][GRIDWIDTH];
 	int generationCounter = 0;
 	int currentGeneration = 0;
@@ -77,7 +68,7 @@ int main(int argc, char *argv[])
 		{
 		case 'n':
 		case 'N':		//new file
-			
+
 			if (argc > 1)
 			{
 				strncpy(filenameInput, argv[1], FILENAME_MAX);
@@ -103,7 +94,8 @@ int main(int argc, char *argv[])
 			}
 			else
 			{
-				//read_data(inFileHandle, &lifeGrid[currentGeneration], currentGeneration, &life);
+				currentGeneration = 0;
+				//read_data(inFileHandle, &lifeGrid[currentGeneration], currentGeneration);
 				prompt = ' ';
 			}
 			break;
@@ -112,8 +104,10 @@ int main(int argc, char *argv[])
 			quit = 1;
 			break;
 		default:		//do next generation
-			//calculate
-			//print
+						//calculate
+			system("cls");
+						//printToScreen
+			printToScreen(lifeGrid[currentGeneration], GRIDHEIGHT, GRIDWIDTH);
 			prompt = getch();
 			break;
 		}
