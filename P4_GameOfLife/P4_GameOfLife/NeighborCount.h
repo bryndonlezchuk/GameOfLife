@@ -1,5 +1,5 @@
-#ifndef ANTHONY_H
-#define ANTHONY_H
+#ifndef NEIGHBORCOUNT_H
+#define NEIGHBORCOUNT_H
 #define ROWS 20
 #define COLUMNS 40
 #define DEAD 0

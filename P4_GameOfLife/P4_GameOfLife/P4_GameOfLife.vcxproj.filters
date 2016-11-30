@@ -24,7 +24,7 @@
     <ClCompile Include="walkthrough.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Project4_Anthony.c">
+    <ClCompile Include="NeighborCount.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -32,7 +32,7 @@
     <ClInclude Include="ScreenPrinter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Project4_Anthony.h">
+    <ClInclude Include="NeighborCount.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
