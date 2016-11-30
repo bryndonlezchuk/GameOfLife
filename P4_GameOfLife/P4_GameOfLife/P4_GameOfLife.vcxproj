@@ -144,6 +144,7 @@
   <ItemGroup>
     <ClCompile Include="GameOfLife.c" />
     <ClCompile Include="Project4_Anthony.c" />
+    <ClCompile Include="read.c" />
     <ClCompile Include="ScreenPrinter.c" />
     <ClCompile Include="walkthrough.c" />
   </ItemGroup>

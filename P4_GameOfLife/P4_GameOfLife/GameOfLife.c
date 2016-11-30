@@ -10,6 +10,7 @@
 #include <conio.h>
 #include <math.h>
 #include "ScreenPrinter.h"
+#include "Project4_Anthony.h"
 #pragma warning(disable: 4996)
 
 #define GRIDWIDTH 40
@@ -39,6 +40,7 @@
 //
 //   Calls:		printToScreen()
 //				read_data()
+//				walkthrough()
 // 
 //   Returns:	EXIT_SUCCESS (successful execution)
 //				EXIT_FAILURE (unsuccessful execution)
@@ -105,6 +107,7 @@ int main(int argc, char *argv[])
 			break;
 		default:		//do next generation
 						//calculate
+			//walkthrough(
 			system("cls");
 						//printToScreen
 			printToScreen(lifeGrid[currentGeneration], GRIDHEIGHT, GRIDWIDTH);
