@@ -144,6 +144,7 @@
   <ItemGroup>
     <ClCompile Include="..\P4_GameOfLife\ScreenPrinter.c" />
     <ClCompile Include="Driver.c" />
+    <ClCompile Include="S:\Desktop\GitHub\P4_GameOfLife\ScreenPrinter\tmp.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\P4_GameOfLife\ScreenPrinter.h" />
