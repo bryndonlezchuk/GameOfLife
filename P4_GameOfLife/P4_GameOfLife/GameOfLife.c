@@ -9,18 +9,54 @@
 #include <string.h>
 #include <conio.h>
 #include <math.h>
-#include "ScreenPrinter.c"
+#include "ScreenPrinter.h"
+#pragma warning(disable: 4996)
 
 #define GRIDWIDTH 40
 #define GRIDHEIGHT 20
 #define GENERATIONS 2
 
+//------------------------------------------------------------------------------
+//   Function:    main()
+//
+//   Title:       Game of Life
+//
+//   Description: 
+//                Steps through generations in an array.
+//
+//   Programmer:  Lael Smith
+//   
+//   Date:        11/22/2016
+// 
+//   Version:     1.0
+//  
+//   Environment: Intel i5-6600 
+//                Software:  OS: MS Windows 10  
+//                Compiles under Microsoft Visual Studio.Net 2015
+//
+//   Input:		  ...
+//   Output:      ...
+//
+//   Calls:		...
+// 
+//   Returns:	EXIT_SUCCESS (successful execution)
+//				EXIT_FAILURE (unsuccessful execution)
+//
+//   History Log:
+//                10/20/16	LMS	Version 1.0
+// ------------------------------------------------------------------------------
+
 int main(int argc, char *argv[])
 {
-	char array[GENERATIONS][GRIDHEIGHT][GRIDWIDTH];
-	/*char lifeGrid[GRIDWIDTH][GRIDHEIGHT][GENERATIONS];*/
+	char lifeGrid[GENERATIONS][GRIDHEIGHT][GRIDWIDTH];
+	int generationCounter = 0;
+	int currentGeneration = 0;
+
+	//variables for files
 	FILE * inFileHandle = NULL;
 	char filenameInput[FILENAME_MAX] = "";
+
+	//variables for main
 	char prompt = 'n';
 	int quit = 0;
 	int returnValue = EXIT_SUCCESS;
@@ -30,88 +66,50 @@ int main(int argc, char *argv[])
 		switch (prompt)
 		{
 		case 'n':
-		case 'N':
-			//new file
-			//readFile(inFileHandle
+		case 'N':		//new file
+
+			if (argc > 1)
+			{
+				strncpy(filenameInput, argv[1], FILENAME_MAX);
+			}
+			else
+			{
+				puts("Enter the name of the file to read:");
+				fgets(filenameInput, FILENAME_MAX, stdin);
+				if (filenameInput[strlen(filenameInput) - 1] == '\n')
+					filenameInput[strlen(filenameInput) - 1] = '\0';
+				else
+					while (getchar() != '\n')
+						;
+			}
+
+			inFileHandle = fopen(filenameInput, "r");
+			if (inFileHandle == NULL)
+			{
+				printf("Could not open file %s for input.\n"
+					"Press any key to Continue", filenameInput);
+				getch();
+				returnValue = EXIT_FAILURE;
+			}
+			else
+			{
+				currentGeneration = 0;
+				//read_data(inFileHandle, &lifeGrid[currentGeneration], currentGeneration);
+				prompt = ' ';
+			}
 			break;
 		case 'q':
-		case 'Q':
-			//quit
+		case 'Q':		//quit
 			quit = 1;
 			break;
-		default:
-			//next generation
+		default:		//do next generation
+						//calculate
+			system("cls");
+						//printToScreen
+			printToScreen(lifeGrid[currentGeneration], GRIDHEIGHT, GRIDWIDTH);
+			prompt = getch();
 			break;
 		}
 	}
-}
-
-
-
-#define DEAD 0
-#define ALIVE 1
-
-
-// Checks the value of any given cell. If the cell is dead, it will return false.
-// If the cell is outside of the bounds, it will just return false.
-// If the cell is alive, it will return true. 
-int isAlive(char array1[1][GRIDHEIGHT][GRIDWIDTH], int xcell, int ycell)
-{
-	if (array[xcell][ycell] == DEAD)
-	{
-		return DEAD;
-	}
-	else if (ycell < 0)
-	{
-		return DEAD;
-	}
-	else if (xcell < 0)
-	{
-		return DEAD;
-	}
-	else if (ycell > GRIDHEIGHT)
-	{
-		return DEAD;
-	}
-	else if (xcell > GRIDWIDTH)
-	{
-		return DEAD;
-	}
-	else {
-		return ALIVE;
-	}
-}
-
-// Takes the array of the current generation and the specified cell to count the neighbors. 
-// returns the number of neighbors of the specified cell
-// Will be used in a double for-loop that calculates the next generation to get the neighbor count of each cell
-//int getNeighbors(int array[ROWS][COLUMNS], int xcell, int ycell) {
-//	int neighbors = 0;
-//	neighbors =
-//		isAlive(array, xcell - 1, ycell - 1) +
-//		isAlive(array, xcell, ycell - 1) +
-//		isAlive(array, xcell + 1, ycell - 1) +
-//		isAlive(array, xcell - 1, ycell) +
-//		isAlive(array, xcell, ycell + 1) +
-//		isAlice(array, xcell - 1, ycell + 1) +
-//		isAlive(array, xcell, ycell + 1) +
-//		isAlive(array, xcell + 1, ycell + 1);
-//	return neighbors;
-//}
-
-
-
-int getNeighborsNew(int array[GRIDHEIGHT][GRIDWIDTH])
-{
-	char nextGen[GRIDHEIGHT][GRIDWIDTH] = "";
-	int neighbors = 0;
-
-	for (int i = 1; i < GRIDHEIGHT - 1; i++)
-	{
-		for (int j = 0; j < GRIDWIDTH; j++)
-		{
-			if (array[i - 1][j - 1] == '*')
-				neighbors++;
-		}
-	}
+	return returnValue;
 }
