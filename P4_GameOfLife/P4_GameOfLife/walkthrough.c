@@ -2,7 +2,7 @@
 #define ALIVE2 '*'
 #define DEAD2 '.'
 
-void walkthrough(char const *current, char const *next)
+void walkthrough(char const *current, char next[ROWS][COLUMNS])
 {
 	int x = COLUMNS, y = ROWS;
 	int i = 0, j = 0;
