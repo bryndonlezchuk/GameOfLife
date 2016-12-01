@@ -47,7 +47,7 @@
 //				EXIT_FAILURE (unsuccessful execution)
 //
 //   History Log:
-//                10/20/16	LMS	Version 1.0
+//                11/22/16	LMS	Version 1.0
 // ------------------------------------------------------------------------------
 
 int main(int argc, char *argv[])
@@ -66,7 +66,7 @@ int main(int argc, char *argv[])
 	int quit = 0;
 	int returnValue = EXIT_SUCCESS;
 
-	while (quit = 0)
+	while (quit == 0)
 	{
 		switch (prompt)
 		{
@@ -94,6 +94,7 @@ int main(int argc, char *argv[])
 				printf("Could not open file %s for input.\n"
 					"Press any key to Continue", filenameInput);
 				getch();
+				quit = 1;
 				returnValue = EXIT_FAILURE;
 			}
 			else
