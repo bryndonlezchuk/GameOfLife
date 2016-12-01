@@ -158,13 +158,22 @@ int getNeighbors(char array[ROWS][COLUMNS], int row, int column) {
 	// cells that have too few/many neighbors before it looks at the next cell. 
 
 
-	if (neighbors == 3 || neighbors == 2)
+	//application of rules
+	//Survival Rule
+	if ((array[row][column] == ALIVE && neighbors == 2) || (array[row][column] == ALIVE && neighbors == 3))
 	{
 		returnValue = ALIVE;
 	}
+	//Birth Rule
+	else if (array[row][column] == DEAD && neighbors == 3)
+	{
+		returnValue = ALIVE;
+	}
+	//Death Rule
 	else if (neighbors < 2 || neighbors > 3)
 	{
 		returnValue = DEAD;
 	}
 	return returnValue;
 }
+

@@ -9,10 +9,10 @@
 #define GEN		10
 #define GEN_MAX 100
 #define	ROW_MIN	2
-#define	ROW		140
+#define	ROW		20
 #define ROW_MAX	400
 #define	COL_MIN	3
-#define COL		200
+#define COL		40
 #define COL_MAX	600
 
 #define NUL		'\000'

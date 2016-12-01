@@ -1,0 +1,11 @@
+Name:Single Cell
+Row:20
+Col:40
+Live:#
+Dead:.     
+End:
+.
+..
+..*
+..
+.

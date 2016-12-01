@@ -111,7 +111,7 @@ int main(int argc, char *argv[])
 			break;
 		default:		//do next generation
 			system("cls");
-			printf("Generation: %d", generationCounter);										//header
+			printf("Generation: %d\n", generationCounter);										//header
 			printToScreen(lifeGrid[currentGeneration], GRIDHEIGHT, GRIDWIDTH);					//print current generation
 			prompt = getch();
 			walkthrough(lifeGrid[currentGeneration], lifeGrid[(currentGeneration + 1) % 2]);	//step through to calculate next generation
