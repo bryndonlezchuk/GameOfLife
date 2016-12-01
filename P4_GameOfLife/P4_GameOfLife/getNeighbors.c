@@ -159,17 +159,21 @@ int getNeighbors(char array[ROWS][COLUMNS], int row, int column) {
 
 	//application of rules
 	//Survival Rule
-	if ((array[row][column] == ALIVE && neighbors == 2) || (array[row][column] == ALIVE && neighbors == 3))
+	if ((array[row][column] == ALIVE) && (neighbors == 2))
 	{
 		returnValue = 1;
 	}
 	//Birth Rule
-	else if (array[row][column] == DEAD && neighbors == 3)
+	else if (neighbors == 3)
 	{
 		returnValue = 1;
 	}
 	//Death Rule
 	else if (neighbors < 2 || neighbors > 3)
+	{
+		returnValue = 0;
+	}
+	else
 	{
 		returnValue = 0;
 	}
