@@ -115,8 +115,9 @@ char isAlive(char array[ROWS][COLUMNS], int xcell, int ycell)
 // History Log:
 //				11-21-16 Wrote Function
 //-----------------------------------------------------------------------------
-void getNeighbors(char array[ROWS][COLUMNS], int row, int column) {
+int getNeighbors(char array[ROWS][COLUMNS], int row, int column) {
 	int neighbors = 0;
+	int returnValue = -1;
 
 	if (isAlive(array, row - 1, column - 1) == ALIVE)
 	{
@@ -159,10 +160,11 @@ void getNeighbors(char array[ROWS][COLUMNS], int row, int column) {
 
 	if (neighbors == 3 || neighbors == 2)
 	{
-		array[row][column] = '*';
+		returnValue = ALIVE;
 	}
 	else if (neighbors < 2 || neighbors > 3)
 	{
-		array[row][column] = '.';
+		returnValue = DEAD;
 	}
+	return returnValue;
 }
