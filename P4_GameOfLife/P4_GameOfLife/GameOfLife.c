@@ -36,8 +36,8 @@
 //                Software:  OS: MS Windows 10  
 //                Compiles under Microsoft Visual Studio.Net 2015
 //
-//   Input:		  ...
-//   Output:      ...
+//   Input:		  File name and menu options from console
+//   Output:      Text to console
 //
 //   Calls:		printToScreen()
 //				read_data()
