@@ -42,4 +42,21 @@
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="Birth_Rule.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="Blinker.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="Overcrowded.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="R_pent.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="Single.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+  </ItemGroup>
 </Project>

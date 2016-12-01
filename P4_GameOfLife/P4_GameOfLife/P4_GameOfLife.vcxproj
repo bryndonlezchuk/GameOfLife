@@ -153,6 +153,13 @@
     <ClInclude Include="life.h" />
     <ClInclude Include="ScreenPrinter.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="Birth_Rule.txt" />
+    <Text Include="Blinker.txt" />
+    <Text Include="Overcrowded.txt" />
+    <Text Include="R_pent.txt" />
+    <Text Include="Single.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
