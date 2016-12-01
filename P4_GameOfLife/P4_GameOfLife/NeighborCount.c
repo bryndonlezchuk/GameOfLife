@@ -1,4 +1,4 @@
-#include "Project4_Anthony.h"
+#include "NeighborCount.h"
 
 // Checks the value of any given cell. If the cell is dead, it will return false.
 // If the cell is outside of the bounds, it will just return false.
@@ -41,7 +41,7 @@ void getNeighbors(char array[ROWS][COLUMNS], int xcell, int ycell) {
 		isAlive(array, xcell + 1, ycell - 1) +
 		isAlive(array, xcell - 1, ycell) +
 		isAlive(array, xcell, ycell + 1) +
-		isAlice(array, xcell - 1, ycell + 1) +
+		isAlive(array, xcell - 1, ycell + 1) +
 		isAlive(array, xcell, ycell + 1) +
 		isAlive(array, xcell + 1, ycell + 1);
 	if (neighbors > 3 || neighbors < 2)

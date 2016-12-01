@@ -11,7 +11,7 @@
 #include <math.h>
 #include "life.h"
 #include "ScreenPrinter.h"
-#include "Project4_Anthony.h"
+#include "getNeighbors.h"
 #pragma warning(disable: 4996)
 
 #define GRIDWIDTH 40
@@ -47,7 +47,7 @@
 //				EXIT_FAILURE (unsuccessful execution)
 //
 //   History Log:
-//                10/20/16	LMS	Version 1.0
+//                11/22/16	LMS	Version 1.0
 // ------------------------------------------------------------------------------
 
 int main(int argc, char *argv[])
@@ -66,7 +66,7 @@ int main(int argc, char *argv[])
 	int quit = 0;
 	int returnValue = EXIT_SUCCESS;
 
-	while (quit = 0)
+	while (quit == 0)
 	{
 		switch (prompt)
 		{
@@ -94,10 +94,12 @@ int main(int argc, char *argv[])
 				printf("Could not open file %s for input.\n"
 					"Press any key to Continue", filenameInput);
 				getch();
+				quit = 1;
 				returnValue = EXIT_FAILURE;
 			}
 			else
 			{
+				generationCounter = 0;
 				currentGeneration = 0;
 				read_data(inFileHandle, &lifeGrid[currentGeneration], currentGeneration, &lifeName);
 				prompt = ' ';
@@ -108,12 +110,13 @@ int main(int argc, char *argv[])
 			quit = 1;
 			break;
 		default:		//do next generation
-						//calculate
-			//walkthrough(
 			system("cls");
-						//printToScreen
-			printToScreen(lifeGrid[currentGeneration], GRIDHEIGHT, GRIDWIDTH);
+			printf("Generation: %d", generationCounter);										//header
+			printToScreen(lifeGrid[currentGeneration], GRIDHEIGHT, GRIDWIDTH);					//print current generation
 			prompt = getch();
+			walkthrough(lifeGrid[currentGeneration], lifeGrid[(currentGeneration + 1) % 2]);	//step through to calculate next generation
+			generationCounter += 1;
+			currentGeneration = generationCounter % 2;
 			break;
 		}
 	}

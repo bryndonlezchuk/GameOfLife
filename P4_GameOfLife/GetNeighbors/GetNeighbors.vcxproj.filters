@@ -15,16 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="GameOfLife.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ScreenPrinter.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="walkthrough.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="read.c">
+    <ClCompile Include="getNeighborsDriver.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="getNeighbors.c">
@@ -32,12 +23,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ScreenPrinter.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="life.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="getNeighbors.h">
       <Filter>Header Files</Filter>
     </ClInclude>
