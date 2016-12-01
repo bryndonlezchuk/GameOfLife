@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="getNeighbors.c">
+    <ClCompile Include="getNeighborsDriver.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="getNeighborsDriver.c">
+    <ClCompile Include="getNeighbors.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

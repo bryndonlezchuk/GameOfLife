@@ -1,4 +1,6 @@
-#include "Project4_Anthony.h"
+#include "getNeighbors.h"
+#define ALIVE2 '*'
+#define DEAD2 '.'
 
 void walkthrough(char current[ROWS][COLUMNS], char next[ROWS][COLUMNS])
 {

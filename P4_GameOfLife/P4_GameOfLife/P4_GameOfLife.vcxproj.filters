@@ -24,10 +24,10 @@
     <ClCompile Include="walkthrough.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="NeighborCount.c">
+    <ClCompile Include="read.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="read.c">
+    <ClCompile Include="getNeighbors.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -35,10 +35,10 @@
     <ClInclude Include="ScreenPrinter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="NeighborCount.h">
+    <ClInclude Include="life.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="life.h">
+    <ClInclude Include="getNeighbors.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

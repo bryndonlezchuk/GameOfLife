@@ -11,7 +11,7 @@
 #include <math.h>
 #include "life.h"
 #include "ScreenPrinter.h"
-#include "Project4_Anthony.h"
+#include "getNeighbors.h"
 #pragma warning(disable: 4996)
 
 #define GRIDWIDTH 40
@@ -99,6 +99,7 @@ int main(int argc, char *argv[])
 			}
 			else
 			{
+				generationCounter = 0;
 				currentGeneration = 0;
 				read_data(inFileHandle, &lifeGrid[currentGeneration], currentGeneration, &lifeName);
 				prompt = ' ';
@@ -111,7 +112,10 @@ int main(int argc, char *argv[])
 		default:		//do next generation
 						//calculate
 			//walkthrough(
+			generationCounter += 1;
+			currentGeneration = generationCounter % 2;
 			system("cls");
+			printf("Generation: %d", generationCounter);
 						//printToScreen
 			printToScreen(lifeGrid[currentGeneration], GRIDHEIGHT, GRIDWIDTH);
 			prompt = getch();
