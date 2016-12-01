@@ -50,9 +50,9 @@ void walkthrough(char const *current, char next[ROWS][COLUMNS])
 		{
 			//calls the "isalive" function to determine
 			//the status of a particular cell
-			if (getNeighbors(current, x, y))
-				next[y][x] = ALIVE2;
+			if (getNeighbors(current, i, j))
+				next[i][j] = ALIVE2;
 			else
-				next[y][x] = DEAD2;
+				next[i][j] = DEAD2;
 		}
 }
