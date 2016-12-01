@@ -4,8 +4,8 @@
 #pragma warning(disable: 4996)
 #define ROWS 20
 #define COLUMNS 40
-#define DEAD 0
-#define ALIVE 1
+#define DEAD '.'
+#define ALIVE '*'
 
 char isAlive(char array[ROWS][COLUMNS], int xcell, int ycell);
 int getNeighbors(char array[ROWS][COLUMNS], int xcell, int ycell);

@@ -55,6 +55,7 @@ int main(int argc, char *argv[])
 	char lifeGrid[GENERATIONS][GRIDHEIGHT][GRIDWIDTH];
 	int generationCounter = 0;
 	int currentGeneration = 0;
+	int nextGeneration = 1;
 	Life lifeName;
 
 	//variables for files
