@@ -53,19 +53,19 @@ char isAlive(char array[ROWS][COLUMNS], int xcell, int ycell)
 	{
 		test = ALIVE;
 	}
-	else if (ycell < 0)
+	else if (ycell <= 0)
 	{
 		test = DEAD;
 	}
-	else if (xcell < 0)
+	else if (xcell <= 0)
 	{
 		test = DEAD;
 	}
-	else if (ycell > COLUMNS)
+	else if (ycell > (COLUMNS - 1))
 	{
 		test = DEAD;
 	}
-	else if (xcell > ROWS)
+	else if (xcell > (ROWS - 1))
 	{
 		test = DEAD;
 	}
